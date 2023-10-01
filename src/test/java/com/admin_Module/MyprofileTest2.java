@@ -10,7 +10,7 @@ import com.SMS.genericutils.JavaUtility;
 import com.SMS.genericutils.WebdriverUtilities;
 import com.mysql.jdbc.Driver;
 
-public class MyprofileGenericutils {
+public class MyprofileTest2 {
 
 	public static void main(String[] args) {
 		Databaseutility dlib=new Databaseutility();

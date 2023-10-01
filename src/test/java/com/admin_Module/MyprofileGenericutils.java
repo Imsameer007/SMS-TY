@@ -29,6 +29,7 @@ public class MyprofileGenericutils {
 		//launch the browser
 		WebDriver driver=new ChromeDriver();
 		wlib.maximizetheBrowser(driver);
+		driver.get(URL);
 
 	}
 }

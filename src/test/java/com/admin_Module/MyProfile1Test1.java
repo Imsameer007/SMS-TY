@@ -14,14 +14,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
 
-import com.SMS.ObjectRepository.LoginPage;
+import com.SMS.genericutils.BaseClass;
 
-public class MyProfile1Test1 {
+public class MyProfile1Test1  {
 	
 
-	public static void main(String[] args) throws Throwable {
-		WebDriver driver=null;
+	@Test
+	public void createMyprofile() throws Throwable {
+	WebDriver driver=null;
 		
 		//fetch the common data from property file 
 		FileInputStream fis=new FileInputStream(".\\src\\test\\resources\\commondata.properties");

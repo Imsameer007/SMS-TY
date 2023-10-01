@@ -19,6 +19,9 @@ private WebElement editteacher;
 @FindBy(xpath="//span[text()='Subject Routing']")
 private WebElement subject;
 
+@FindBy(xpath=" //a[text()=' Add Teacher']")
+private WebElement addteacher;
+
 public Homepage(WebDriver driver) 
 {
 	PageFactory.initElements(driver, this);
@@ -35,11 +38,18 @@ public WebElement getEditteacher() {
 public WebElement getSubject() {
 	return subject;
 }
+
+public WebElement getAddteacher() {
+	return addteacher;
+}
 //business layeer
 public void ClickOnProfilePage() {
 	myprofile.click();
 }
 	public void Clickteacher() {
 	teacher.click();
+	}
+	public void ClickAddTeacher() {
+		addteacher.click();
 	}
 }

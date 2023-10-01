@@ -17,8 +17,8 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.SMS.ObjectRepository.Homepage;
 import com.SMS.ObjectRepository.LoginPage;
-import com.SMS.ObjectRepository.MyprofilePage;
 import com.SMS.ObjectRepository.MyprofileUpdatePage;
+import com.SMS.ObjectRepository.ProfileClickEditPage;
 import com.SMS.genericutils.FileUtility;
 
 public class MyProfile1Test2_POM {
@@ -73,9 +73,9 @@ public class MyProfile1Test2_POM {
 		Homepage hp=new Homepage(driver);
 		hp.ClickOnProfilePage();
 		//driver.findElement(By.id("btnEdit")).click();
-		MyprofilePage mp=new MyprofilePage(driver);
-		mp.Editpage();
-		//Thread.sleep(2000);
+		ProfileClickEditPage pce=new ProfileClickEditPage(driver);
+		pce.Editpage();
+		
 		//enter the mandatory fields
 		HashMap<String,String> map=new HashMap<String,String>(); //empty map
 				for(int i=1;i<=count;i++) {
@@ -111,7 +111,7 @@ public class MyProfile1Test2_POM {
 	
 		}
 		MyprofileUpdatePage mfp	=new MyprofileUpdatePage();
-		mfp.ProfileDetails(map, driver);
+		mfp.ProfileDetails(map, driver, Gender);
 	
 
 	}}

@@ -54,9 +54,9 @@ public class WebdriverUtilities
 	 * @param duration
 	 */
 
-	public void implicitlyWait(WebDriver driver) 
+	public void implicitlyWait(WebDriver driver,int duration) 
 	{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(duration));
 	}
 	/**
 	 * This method will wait until the url of the page get loads
@@ -295,7 +295,7 @@ public class WebdriverUtilities
 	 * @param screenshot
 	 * @return
 	 */
-		public String screenshotDemo(WebDriver driver,String screenshot) {
+		public static String screenshotDemo(WebDriver driver,String screenshot) {
 			TakesScreenshot ts=(TakesScreenshot)driver;
 			File src = ts.getScreenshotAs(OutputType.FILE);
 			File dest=new File("./screenshot/"+screenshot+".png");
